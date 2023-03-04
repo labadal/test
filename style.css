@@ -57,21 +57,21 @@ h2 {
   width: 100px;
   height: 50px;
   background-color: red;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  position: relative;
 }
 
 .red-rectangle:hover {
-  animation: bounce 0.5s ease infinite;
-  background-color: green;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 50px solid green;
 }
 
-@keyframes bounce {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 20px;
-  }
-  100% {
-    top: 0;
-  }
+.red-rectangle:active {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
